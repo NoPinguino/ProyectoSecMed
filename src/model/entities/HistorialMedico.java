@@ -23,8 +23,8 @@ public class HistorialMedico {
 
     @Override
     public String toString() {
-        return "HistorialMedico{" +
-                "entradas=" + entradas +
+        return  "Objeto HistorialMedico {\n" +
+                " entradas = '" + entradas + "'\n" +
                 '}';
     }
 }

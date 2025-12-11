@@ -30,20 +30,20 @@ public class Administrativo extends Usuario {
      * @param pruebaMedica
      */
     public void asignarPrueba(Paciente paciente, PruebaMedica pruebaMedica) {
-        // paciente.getHistorial().
+        paciente.getHistorial().agregarEntrada(pruebaMedica);
     }
 
     @Override
     public String toString() {
-        return "Administrativo{" +
-                "idAdministrativo='" + idAdministrativo + '\'' +
-                ", username='" + username + '\'' +
-                ", passwordHash='" + passwordHash + '\'' +
-                ", salt='" + salt + '\'' +
-                ", nombre='" + nombre + '\'' +
-                ", dni='" + dni + '\'' +
-                ", email='" + email + '\'' +
-                ", direccion='" + direccion + '\'' +
+        return  "Objeto Administrativo {\n" +
+                " idAdministrativo = '" + idAdministrativo + "',\n" +
+                " username = '" + username + "',\n" +
+                " passwordHash = '" + passwordHash + "',\n" +
+                " salt = '" + salt + "',\n" +
+                " nombre = '" + nombre + "',\n" +
+                " dni = '" + dni + "',\n" +
+                " email = '" + email + "',\n" +
+                " direccion = '" + direccion + "'\n" +
                 '}';
     }
 }

@@ -24,13 +24,13 @@ public class Paciente extends Persona {
 
     @Override
     public String toString() {
-        return "Paciente{" +
-                "historial=" + historial +
-                ", medicoAsignado=" + medicoAsignado +
-                ", nombre='" + nombre + '\'' +
-                ", dni='" + dni + '\'' +
-                ", email='" + email + '\'' +
-                ", direccion='" + direccion + '\'' +
+        return  "Objeto Paciente {\n" +
+                " historial = '" + historial + "',\n" +
+                " medicoAsignado = '" + medicoAsignado + "',\n" +
+                " nombre = '" + nombre + "',\n" +
+                " dni = '" + dni + "',\n" +
+                " email = '" + email + "',\n" +
+                " direccion = '" + direccion + "'\n" +
                 '}';
     }
 }

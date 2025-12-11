@@ -24,8 +24,8 @@ public class Receta {
 
     @Override
     public String toString() {
-        return "Receta{" +
-                "medicamentos=" + medicamentos +
+        return  "Objeto Receta {\n" +
+                " medicamentos = '" + medicamentos + "'\n" +
                 '}';
     }
 }
