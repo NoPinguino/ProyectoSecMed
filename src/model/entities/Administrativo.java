@@ -25,9 +25,9 @@ public class Administrativo extends Usuario {
     }
 
     /**
-     *
-     * @param paciente
-     * @param pruebaMedica
+     * Accedemos a una instancia de paciente, a su historial asignado, y añadimos una prueba en el historial.
+     * @param paciente Objeto paciente
+     * @param pruebaMedica Objeto PruebaMedica
      */
     public void asignarPrueba(Paciente paciente, PruebaMedica pruebaMedica) {
         paciente.getHistorial().agregarEntrada(pruebaMedica);

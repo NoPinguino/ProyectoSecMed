@@ -23,7 +23,6 @@ public abstract class EntradaHistorial {
     public String getCausa() {
         return causa;
     }
-
     /**
      * Devuelve el nombre de la clase.
      * @return String con el nombre de la clase
