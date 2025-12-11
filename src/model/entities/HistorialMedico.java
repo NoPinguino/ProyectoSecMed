@@ -13,6 +13,14 @@ public class HistorialMedico {
         return entradas;
     }
 
+    /**
+     * Añadimos una entrada a la lista de entradas
+     * @param entradaHistorial tipo EntradaHistorial
+     */
+    public void agregarEntrada(EntradaHistorial entradaHistorial) {
+        entradas.add(entradaHistorial);
+    }
+
     @Override
     public String toString() {
         return "HistorialMedico{" +

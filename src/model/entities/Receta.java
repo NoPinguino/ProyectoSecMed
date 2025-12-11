@@ -13,6 +13,7 @@ public class Receta {
     public List<String> getMedicamentos() {
         return medicamentos;
     }
+
     /**
      * Devuelve el nombre de la clase.
      * @return String con el nombre de la clase

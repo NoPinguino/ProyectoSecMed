@@ -27,6 +27,14 @@ public class PruebaMedica extends EntradaHistorial {
         this.resultado = resultado;
     }
 
+    /**
+     * Devuelve el nombre de la clase.
+     * @return String con el nombre de la clase
+     */
+    public String getTipo() {
+        return this.getClass().getSimpleName();
+    }
+
     @Override
     public String toString() {
         return "PruebaMedica{" +
