@@ -12,13 +12,19 @@ public class PruebaMedica extends EntradaHistorial {
         this.tipoPrueba = tipoPrueba;
         this.resultado = resultado;
     }
-    /* Getter: -TipoPrueba tipoPrueba */
+    /* Getter & Setter: -TipoPrueba tipoPrueba */
     public TipoPrueba getTipoPrueba() {
         return tipoPrueba;
     }
-    /* Getter: -String resultado */
+    public void setTipoPrueba(TipoPrueba tipoPrueba) {
+        this.tipoPrueba = tipoPrueba;
+    }
+    /* Getter & Setter: -String resultado */
     public String getResultado() {
         return resultado;
+    }
+    public void setResultado(String resultado) {
+        this.resultado = resultado;
     }
 
     @Override
