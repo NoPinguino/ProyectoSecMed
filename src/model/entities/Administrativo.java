@@ -1,22 +1,52 @@
 package model.entities;
 
+/**
+ * Representa un usuario administrativo en el sistema.
+ * <p>
+ *     Un administrativo puede hacer gestiones a los pacientes, como asignarles un médico y/o pruebas médicas.
+ * </p>
+ */
 public class Administrativo extends Usuario {
+    /**
+     * Identificador único del administrativo
+     */
     private String idAdministrativo;
-
+    /**
+     * Contruye un nuevo objeto Administrativo
+     *
+     * @param nombre Nombre completo del administrativo
+     * @param dni Documento nacional de identidad
+     * @param email Correo electrónico
+     * @param direccion Dirección postal
+     * @param username Nombre de usuario en el sistema
+     * @param passwordHash Hash de la contraseña
+     * @param salt Salt utilizada para generar el hash
+     * @param idAdministrativo Identificador del administrativo
+     */
     public Administrativo(String nombre, String dni, String email, String direccion, String username, String passwordHash, String salt, String idAdministrativo) {
         super(nombre, dni, email, direccion, username, passwordHash, salt);
         this.idAdministrativo = idAdministrativo;
     }
-    /* Setter & Getter: -String idAdministrativo */
+    /**
+     * Devuelve el identificador del administrativo.
+     *
+     * @return id del administrativo
+     */
     public String getIdAdministrativo() {
         return idAdministrativo;
     }
+    /**
+     * Establece el identificador del administrativo.
+     *
+     * @param idAdministrativo nuevo identificador.
+     */
     public void setIdAdministrativo(String idAdministrativo) {
         this.idAdministrativo = idAdministrativo;
     }
 
     /**
-     * Accedemos a una instancia de paciente y le asignamos una instancia de médico en el parámetro medicoAsignado
+     * Asigna un médico a un paciente.
+     *
      * @param paciente Objeto paciente
      * @param medico Objeto médico
      */
@@ -25,7 +55,8 @@ public class Administrativo extends Usuario {
     }
 
     /**
-     * Accedemos a una instancia de paciente, a su historial asignado, y añadimos una prueba en el historial.
+     * Añade una prueba médica al historial de un paciente.
+     *
      * @param paciente Objeto paciente
      * @param pruebaMedica Objeto PruebaMedica
      */
@@ -33,6 +64,11 @@ public class Administrativo extends Usuario {
         paciente.getHistorial().agregarEntrada(pruebaMedica);
     }
 
+    /**
+     * Devuelve una representación de la instancia del objeto en forma de texto.
+     *
+     * @return representación de objeto Administrativo
+     */
     @Override
     public String toString() {
         return  "Objeto Administrativo {\n" +

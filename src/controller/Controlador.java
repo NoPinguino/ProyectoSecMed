@@ -1,14 +1,30 @@
 package controller;
 
 import model.entities.*;
-import model.enums.Especialidad;
-import model.enums.TipoPrueba;
+import model.enums.*;
 import view.Vista;
 
 import java.time.LocalDate;
 import java.util.Arrays;
 
+/**
+ * Controlador principal de la aplicación.
+ * <p>
+ *     Se encarga de la creación de usuarios y pacientes, la asignación de médicos y pruebas médicas, y la comunicación
+ *     con la vista.
+ * </p>
+ *
+ * @author misael
+ * @version 1.0
+ */
 public class Controlador {
+    /**
+     * Inicia la simulación.
+     * <p>
+     *     Crea instancias de administrativos, médicos y pacientes, estableciendo las relaciones entre ellos,
+     *     realizando pruebas y mostrando el resultado a través de la vista.
+     * </p>
+     */
     public void iniciar() {
         Vista miVista = new Vista();
 
