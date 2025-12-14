@@ -6,6 +6,7 @@ public class Paciente extends Persona {
 
     public Paciente(String nombre, String dni, String email, String direccion) {
         super(nombre, dni, email, direccion);
+        this.historial = new HistorialMedico();
     }
     /* Setter & Getter: -HistorialMedico historial */
     public HistorialMedico getHistorial() {

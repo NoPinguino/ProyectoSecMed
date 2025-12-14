@@ -9,7 +9,7 @@ public class Receta extends EntradaHistorial{
 
     public Receta(LocalDate fecha, String idMedico, String causa, List<String> medicamentos) {
         super(fecha, idMedico, causa);
-        this.medicamentos = new ArrayList<>();
+        this.medicamentos = medicamentos != null ? medicamentos : new ArrayList<>();
     }
     /* Getter: -List<String> numeroColegiado */
     public List<String> getMedicamentos() {

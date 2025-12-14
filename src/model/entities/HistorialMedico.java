@@ -5,7 +5,7 @@ import java.util.List;
 public class HistorialMedico {
     private List<EntradaHistorial> entradas;
 
-    public HistorialMedico(List<EntradaHistorial> entradas) {
+    public HistorialMedico() {
         this.entradas = new ArrayList<>();
     }
     /* Getter: -List<EntradaHistorial> entradas */
