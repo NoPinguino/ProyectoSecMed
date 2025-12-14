@@ -12,7 +12,7 @@ public class Administrativo extends Usuario {
      */
     private String idAdministrativo;
     /**
-     * Contruye un nuevo objeto Administrativo
+     * Construye un objeto {@code Administrativo}
      *
      * @param nombre Nombre completo del administrativo
      * @param dni Documento nacional de identidad
@@ -67,7 +67,7 @@ public class Administrativo extends Usuario {
     /**
      * Devuelve una representación de la instancia del objeto en forma de texto.
      *
-     * @return representación de objeto Administrativo
+     * @return representación de objeto {@code Administrativo}
      */
     @Override
     public String toString() {

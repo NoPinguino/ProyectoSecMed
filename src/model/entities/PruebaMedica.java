@@ -3,31 +3,73 @@ import model.enums.TipoPrueba;
 
 import java.time.LocalDate;
 
+/**
+ * Representación de una entrada de historial médico tipo {@code PruebaMedica}
+ * <p>
+ *     Hereda atributos y métodos de {@code EntradaHistorial} y añade información específica sobre el tipo de prueba
+ *     y el resultado de la misma.
+ * </p>
+ *
+ * @author misael
+ * @version 1.0
+ */
 public class PruebaMedica extends EntradaHistorial {
+    /**
+     * Tipo de prueba realizada.
+     */
     private TipoPrueba tipoPrueba;
+    /**
+     * Resultado de la prueba realizada.
+     */
     private String resultado;
 
+    /**
+     * Construye un objeto {@code PruebaMedica}
+     *
+     * @param fecha Fecha en la que se realizó la prueba.
+     * @param idMedico Id del médico que realizó la prueba.
+     * @param causa Motivo por el que se realizó la prueba.
+     * @param tipoPrueba Tipo de prueba realizada.
+     * @param resultado Resultado de la prueba realizada.
+     */
     public PruebaMedica(LocalDate fecha, String idMedico, String causa, TipoPrueba tipoPrueba, String resultado) {
         super(fecha, idMedico, causa);
         this.tipoPrueba = tipoPrueba;
         this.resultado = resultado;
     }
-    /* Getter: -TipoPrueba tipoPrueba */
+
+    /**
+     * Devuelve el tipo de prueba realizada.
+     *
+     * @return Tipo de prueba realizada.
+     */
     public TipoPrueba getTipoPrueba() {
         return tipoPrueba;
     }
-    /* Getter: -String resultado */
+
+    /**
+     * Devuelve el resultado de la prueba realizada.
+     *
+     * @return Resultado de la prueba realizada.
+     */
     public String getResultado() {
         return resultado;
     }
+
     /**
-     * Devuelve el nombre de la clase.
-     * @return String con el nombre de la clase
+     * Devuelve el nombre simplificado de la clase.
+     *
+     * @return Nombre simplificado de la clase.
      */
     public String getTipo() {
         return this.getClass().getSimpleName();
     }
 
+    /**
+     * Devuelve una representación de la instancia del objeto en forma de texto.
+     *
+     * @return Representación de objeto {@code PruebaMedica}
+     */
     @Override
     public String toString() {
         return  "Objeto PruebaMedica{" +
