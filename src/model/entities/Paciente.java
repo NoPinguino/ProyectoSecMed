@@ -6,9 +6,6 @@ package model.entities;
  *     Paciente extiende de persona, contando con sus atributos y métodos, además, dispone de un historial médico y
  *     tiene un médico asignado.
  * </p>
- *
- * @author misael
- * @version 1.0
  */
 public class Paciente extends Persona {
     private HistorialMedico historial;

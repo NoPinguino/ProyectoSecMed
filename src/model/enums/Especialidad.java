@@ -5,9 +5,6 @@ package model.enums;
  * <p>
  *     Cada una de las 20 constantes creadas dispone de un nombre con formato legible para imprimir por consola.
  * </p>
- *
- * @author misael
- * @version 1.0
  */
 public enum Especialidad {
     MEDICINA_FAMILIAR("Medicina Familiar"),

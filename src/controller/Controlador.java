@@ -13,9 +13,6 @@ import java.util.Arrays;
  *     Se encarga de la creación de usuarios y pacientes, la asignación de médicos y pruebas médicas, y la comunicación
  *     con la vista.
  * </p>
- *
- * @author misael
- * @version 1.0
  */
 public class Controlador {
     /**

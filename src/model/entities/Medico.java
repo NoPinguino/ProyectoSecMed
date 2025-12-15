@@ -7,9 +7,6 @@ import model.enums.Especialidad;
  *  Un médico pertenece al personal sanitario, por lo tanto, hereda sus atributos y métodos, sumado a ello dispone
  *  de una especialidad médica.
  * </p>
- *
- * @author misael
- * @version 1.0
  */
 public class Medico extends PersonalSanitario {
     private Especialidad especialidad;

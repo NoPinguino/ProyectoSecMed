@@ -5,9 +5,6 @@ package model.entities;
  * <p>
  *     Hereda los métodos y atributos de {@code Usuario}, además dispone de un número de colegiado.
  * </p>
- *
- * @author misael
- * @version 1.0
  */
 public abstract class PersonalSanitario extends Usuario {
     protected String numeroColegiado;

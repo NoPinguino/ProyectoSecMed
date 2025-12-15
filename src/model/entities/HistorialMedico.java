@@ -8,9 +8,6 @@ import java.util.List;
  *     Clase que contiene la colección de entradas del historial médico de un paciente y los métodos para gestionar
  *     dichas entradas.
  * </p>
- *
- * @author misael
- * @version 1.0
  */
 public class HistorialMedico {
     private List<EntradaHistorial> entradas;

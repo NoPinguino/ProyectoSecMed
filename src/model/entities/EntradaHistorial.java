@@ -7,9 +7,6 @@ import java.time.LocalDate;
  *     Clase abstracta que sirve como base para los distintos tipos de entradas en el historial, como lo son
  *     prueba médica o receta.
  * </p>
- *
- * @author misael
- * @version 1.0
  */
 public abstract class EntradaHistorial {
     protected LocalDate fecha;

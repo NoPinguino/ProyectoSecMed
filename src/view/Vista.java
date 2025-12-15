@@ -5,9 +5,6 @@ package view;
  * <p>
  *     Vista del esquema MVC, se utiliza para mostrar mensajes y representaciones de objetos.
  * </p>
- *
- * @author misael
- * @version 1.0
  */
 public class Vista {
     /**

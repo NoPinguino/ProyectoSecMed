@@ -6,9 +6,6 @@ package model.entities;
  *     Hereda atributos y métodos de {@code Persona} y a ellos añade el nombre de usuario dentro del sistema, el
  *     hash de la contraseña y el salt utilizado para generar ese hash.
  * </p>
- *
- * @author misael
- * @version 1.0
  */
 public class Usuario extends Persona {
     protected String username;

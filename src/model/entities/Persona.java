@@ -6,9 +6,6 @@ package model.entities;
  *     Clase abstracta de la que hereda {@code Usuario} y {@code Paciente}, representa a una persona con sus datos,
  *     como nombre, dni, email y dirección postal.
  * </p>
- *
- * @author misael
- * @version 1.0
  */
 public abstract class Persona {
     protected String nombre;

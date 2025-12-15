@@ -9,9 +9,6 @@ import java.time.LocalDate;
  *     Hereda atributos y métodos de {@code EntradaHistorial} y añade información específica sobre el tipo de prueba
  *     y el resultado de la misma.
  * </p>
- *
- * @author misael
- * @version 1.0
  */
 public class PruebaMedica extends EntradaHistorial {
     private TipoPrueba tipoPrueba;

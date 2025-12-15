@@ -9,9 +9,6 @@ import java.util.List;
  * <p>
  *     Hereda atributos y métodos de {@code EntradaHistorial} y añade una lista de medicamentos recetados.
  * </p>
- *
- * @author misael
- * @version 1.0
  */
 public class Receta extends EntradaHistorial{
     private List<String> medicamentos;

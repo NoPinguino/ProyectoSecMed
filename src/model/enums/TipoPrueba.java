@@ -5,9 +5,6 @@ package model.enums;
  * <p>
  *     Cada constante dispone de un nombre con formato legible para imprimir por consola.
  * </p>
- *
- * @author misael
- * @version 1.0
  */
 public enum TipoPrueba {
     ANALISIS_SANGRE("Análisis de sangre"),
