@@ -1,192 +1,238 @@
-@startuml SecMec
+@startuml
 
-skinparam classAttributeIconSize 0
-skinparam backgroundColor white
+' Estilos globales
 skinparam class {
-    BackgroundColor<<abstract>> #F0F0F0
-    BorderColor #000000
-    ArrowColor #000000
+    BackgroundColor #E3F2FD
+    BorderColor #0D47A1
+    ArrowColor #0D47A1
+    FontName Arial
+    FontSize 14
+    AttributeFontColor #0D47A1
+    MethodFontColor #1565C0
+    Shadowing true
+    Rounded true
+}
+abstract class Persona {
+    # nombre : String
+    # dni : String
+    # email : String
+    # direccion : String
+    --
+    + Persona(
+        nombre : String,
+        dni : String,
+        email : String,
+        direccion : String
+    )
+    + getNombre() : String
+    + setNombre(nombre : String) : void
+    + getDni() : String
+    + setDni(dni : String) : void
+    + getEmail() : String
+    + setEmail(email : String) : void
+    + getDireccion() : String
+    + setDireccion(direccion : String) : void
+    + toString() : String
 }
 
-' ===== CLASES ABSTRACTAS =====
-abstract class Persona <<abstract>> {
-  # nombre: String
-  # dni: String
-  # email: String
-  # direccion: String
-  __
-  + Persona(String,String,String,String)
-  + getNombre(): String
-  + getDni(): String
-  + getEmail(): String
-  + getDireccion(): String
-  + setNombre(String): void
-  + setDni(String): void
-  + setEmail(String): void
-  + setDireccion(String): void
-  + toString(): String
-}
-
-abstract class EntradaHistorial <<abstract>> {
-  # fecha: LocalDate
-  # idMedico: String
-  # causa: String
-  __
-  + EntradaHistorial(LocalDate,String,String)
-  + getFecha(): LocalDate
-  + getIdMedico(): String
-  + getCausa(): String
-  + {abstract} getTipo(): String
-}
-
-abstract class PersonalSanitario <<abstract>> {
-  # numeroColegiado: String
-  __
-  + PersonalSanitario(String,String,String,String,String,String,String,String)
-  + getNumeroColegiado(): String
-  + setNumeroColegiado(String): void
-}
-
-' ===== CLASES CONCRETAS - Usuarios =====
 class Usuario {
-  # username: String
-  # passwordHash: String
-  # salt: String
-  __
-  + Usuario(String,String,String,String,String,String,String)
-  + getUsername(): String
-  + setUsername(String): void
-  + getPasswordHash(): String
-  + setPasswordHash(String): void
-  + getSalt(): String
-  + setSalt(String): void
-  + toString(): String
-}
-
-class Administrativo {
-  - idAdministrativo: String
-  __
-  + Administrativo(String,String,String,String,String,String,String,String)
-  + getIdAdministrativo(): String
-  + setIdAdministrativo(String): void
-  + asignarMedico(Paciente, Medico): String
-  + asignarPrueba(Paciente, PruebaMedica): String
-  + toString(): String
-}
-
-class Medico {
-  - especialidad: Especialidad
-  __
-  + Medico(String,String,String,String,String,String,String,String,Especialidad)
-  + getEspecialidad(): Especialidad
-  + setEspecialidad(Especialidad): void
-  + toString(): String
+    # username : String
+    # passwordHash : String
+    # salt : String
+    --
+    + Usuario(
+        nombre : String,
+        dni : String,
+        email : String,
+        direccion : String,
+        username : String,
+        passwordHash : String,
+        salt : String
+    )
+    + getUsername() : String
+    + setUsername(username : String) : void
+    + getPasswordHash() : String
+    + setPasswordHash(passwordHash : String) : void
+    + getSalt() : String
+    + setSalt(salt : String) : void
+    + toString() : String
 }
 
 class Paciente {
-  - historial: HistorialMedico
-  - medicoAsignado: Medico
-  __
-  + Paciente(HistorialMedico, Medico, String,String,String,String)
-  + Paciente(HistorialMedico, String,String,String,String)
-  + getHistorial(): HistorialMedico
-  + setHistorial(HistorialMedico): void
-  + getMedicoAsignado(): Medico
-  + setMedicoAsignado(Medico): void
-  + toString(): String
+    - historial : HistorialMedico
+    - medicoAsignado : Medico
+    --
+    + Paciente(
+        nombre : String,
+        dni : String,
+        email : String,
+        direccion : String
+    )
+    + getHistorial() : HistorialMedico
+    + setHistorial(historial : HistorialMedico) : void
+    + getMedicoAsignado() : Medico
+    + setMedicoAsignado(medicoAsignado : Medico) : void
+    + toString() : String
 }
 
-' ===== HISTORIAL =====
 class HistorialMedico {
-  - {final} entradas: ArrayList<EntradaHistorial>
-  __
-  + HistorialMedico()
-  + getEntradas(): String
-  + agregarEntrada(EntradaHistorial): String
-  + toString(): String
+    - entradas : List<EntradaHistorial>
+    --
+    + HistorialMedico()
+    + getEntradas() : List<EntradaHistorial>
+    + agregarEntrada(entradaHistorial : EntradaHistorial) : void
+    + toString() : String
+}
+
+abstract class EntradaHistorial {
+    # fecha : LocalDate
+    # idMedico : String
+    # causa : String
+    --
+    + EntradaHistorial(
+        fecha : LocalDate,
+        idMedico : String,
+        causa : String
+    )
+    + getFecha() : LocalDate
+    + getIdMedico() : String
+    + getCausa() : String
+    + getTipo() : String
 }
 
 class PruebaMedica {
-  - {final} tipoPrueba: TipoPrueba
-  - {final} resultado: String
-  __
-  + PruebaMedica(LocalDate,String,String,TipoPrueba,String)
-  + getTipoPrueba(): TipoPrueba
-  + getResultado(): String
-  + getTipo(): String
-  + toString(): String
+    - tipoPrueba : TipoPrueba
+    - resultado : String
+    --
+    + PruebaMedica(
+        fecha : LocalDate,
+        idMedico : String,
+        causa : String,
+        tipoPrueba : TipoPrueba,
+        resultado : String
+    )
+    + getTipoPrueba() : TipoPrueba
+    + getResultado() : String
+    + getTipo() : String
+    + toString() : String
 }
 
 class Receta {
-  - {final} medicamentos: ArrayList<String>
-  __
-  + Receta(LocalDate,String,String,ArrayList<String>)
-  + getMedicamentos(): ArrayList<String>
-  + getTipo(): String
-  + toString(): String
+    - medicamentos : List<String>
+    --
+    + Receta(
+        fecha : LocalDate,
+        idMedico : String,
+        causa : String,
+        medicamentos : List<String>
+    )
+    + getMedicamentos() : List<String>
+    + getTipo() : String
+    + toString() : String
 }
 
-' ===== ENUMERACIONES =====
-enum TipoPrueba {
-  LASER
-  ECO
-  ANALISIS_SANGRE
-  RAYOS_X
-  TAC
-  RESONANCIA
-  BIOPSIA
-  ECG
-  ORINA
-  GLUCOSA
-  __
-  - nombrePrueba: String
-  __
-  TipoPrueba(String)
-  + getNombrePrueba(): String
+class Administrativo {
+    - idAdministrativo : String
+    --
+    + Administrativo(
+        nombre : String,
+        dni : String,
+        email : String,
+        direccion : String,
+        username : String,
+        passwordHash : String,
+        salt : String,
+        idAdministrativo : String
+    )
+    + getIdAdministrativo() : String
+    + setIdAdministrativo(idAdministrativo : String) : void
+    + asignarMedico(paciente : Paciente, medico : Medico) : void
+    + asignarPrueba(paciente : Paciente, pruebaMedica : PruebaMedica) : void
+    + toString() : String
+}
+
+abstract class PersonalSanitario {
+    # numeroColegiado : String
+    --
+    + PersonalSanitario(
+        nombre : String,
+        dni : String,
+        email : String,
+        direccion : String,
+        username : String,
+        passwordHash : String,
+        salt : String,
+        numeroColegiado : String
+    )
+    + getNumeroColegiado() : String
+    + setNumeroColegiado(numeroColegiado : String) : void
+}
+
+class Medico {
+    - especialidad : Especialidad
+    --
+    + Medico(
+        nombre : String,
+        dni : String,
+        email : String,
+        direccion : String,
+        username : String,
+        passwordHash : String,
+        salt : String,
+        numeroColegiado : String,
+        especialidad : Especialidad
+    )
+    + getEspecialidad() : Especialidad
+    + setEspecialidad(especialidad : Especialidad) : void
+    + toString() : String
 }
 
 enum Especialidad {
-  CARDIOLOGIA
-  DERMATOLOGIA
-  NEUROLOGIA
-  PEDIATRIA
-  GINECOLOGIA
-  ONCOLOGIA
-  ORTOPEDIA
-  PSIQUIATRIA
-  ANESTESIOLOGIA
-  UROLOGIA
-  ENDOCRINOLOGIA
-  GASTROENTEROLOGIA
-  HEMATOLOGIA
-  NEONATOLOGIA
-  OTORRINOLARINGOLOGIA
-  __
-  - nombre: String
-  __
-  Especialidad(String)
-  + toString(): String
+    ...
 }
 
+' CONSTANTES DEL ENUM:
+/'
+    MEDICINA_FAMILIAR
+    PEDIATRIA
+    CARDIOLOGIA
+    NEUROLOGIA
+    DERMATOLOGIA
+    PSIQUIATRIA
+    GINECOLOGIA
+    TRAUMATOLOGIA
+    OFTALMOLOGIA
+    OTORRINOLARINGOLOGIA
+    ENDOCRINOLOGIA
+    NEFROLOGIA
+    NEUMOLOGIA
+    ONCOLOGIA
+    REUMATOLOGIA
+    GASTROENTEROLOGIA
+    UROLOGIA
+    CIRUGIA_GENERAL
+    ANESTESIOLOGIA
+    RADIOLOGIA
+'/
 
-' ===== CLASES MVC =====
-class Main {
-  + {static} main(String[]): void
+enum TipoPrueba {
+    ...
 }
 
-class ControladorPrincipal {
-  - {static final} vista: VistaConsola
-  __
-  + ControladorPrincipal()
-  + ejecutarPruebas(): void
-}
+' CONSTANTES DEL ENUM:
+/'
+    ANALISIS_SANGRE
+    ANALISIS_ORINA
+    RADIOGRAFIA
+    RESONANCIA
+    ECOGRAFIA
+    ELECTROCARDIOGRAMA
+    TEST_ALERGIAS
+    PRUEBA_ESFUERZO
+    ENDOSCOPIA
+'/
 
-class VistaConsola {
-  + VistaConsola()
-  + mostrarEnConsola(String): void
-}
-
-' ===== HERENCIAS =====
+' RELACIONES DE HERENCIA:
 Persona <|-- Usuario
 Persona <|-- Paciente
 Usuario <|-- Administrativo
@@ -194,28 +240,12 @@ Usuario <|-- PersonalSanitario
 PersonalSanitario <|-- Medico
 EntradaHistorial <|-- PruebaMedica
 EntradaHistorial <|-- Receta
-
-' ===== RELACIONES =====
-Paciente *-- "1" HistorialMedico : tiene
-Paciente --> "0..1" Medico : medicoAsignado
-HistorialMedico o-- "*" EntradaHistorial : contiene
-Medico --> "1" Especialidad : tiene
-PruebaMedica --> "1" TipoPrueba : tiene
-
-' Dependencias
-Administrativo ..> Paciente : gestiona
-Administrativo ..> Medico : asigna
-Administrativo ..> PruebaMedica : asigna
-
-ControladorPrincipal *-- "1" VistaConsola : vista
-ControladorPrincipal ..> Medico : crea/usa
-ControladorPrincipal ..> Administrativo : crea/usa
-ControladorPrincipal ..> Paciente : crea/usa
-ControladorPrincipal ..> PruebaMedica : crea/usa
-ControladorPrincipal ..> Receta : crea/usa
-ControladorPrincipal ..> HistorialMedico : crea/usa
-ControladorPrincipal ..> Especialidad : usa
-
-Main ..> ControladorPrincipal : crea/usa
+' RELACIONES DE COMPOSICIÓN / AGREGACIÓN:
+Paciente *-- HistorialMedico : tiene
+Paciente -- Medico : asignado
+HistorialMedico *-- EntradaHistorial : contiene
+' ENUMS:
+Medico --> Especialidad
+PruebaMedica --> TipoPrueba
 
 @enduml
