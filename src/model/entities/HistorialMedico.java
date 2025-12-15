@@ -13,9 +13,6 @@ import java.util.List;
  * @version 1.0
  */
 public class HistorialMedico {
-    /**
-     * Lista que contiene las entradas en el historial de un paciente.
-     */
     private List<EntradaHistorial> entradas;
 
     /**

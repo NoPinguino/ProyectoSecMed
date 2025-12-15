@@ -7,10 +7,8 @@ package model.entities;
  * </p>
  */
 public class Administrativo extends Usuario {
-    /**
-     * Identificador único del administrativo
-     */
     private String idAdministrativo;
+
     /**
      * Construye un objeto {@code Administrativo}
      *

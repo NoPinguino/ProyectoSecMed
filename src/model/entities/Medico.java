@@ -12,9 +12,6 @@ import model.enums.Especialidad;
  * @version 1.0
  */
 public class Medico extends PersonalSanitario {
-    /**
-     * Especialidad del médico.
-     */
     private Especialidad especialidad;
 
     /**

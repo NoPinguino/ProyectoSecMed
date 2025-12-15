@@ -11,13 +11,7 @@ package model.entities;
  * @version 1.0
  */
 public class Paciente extends Persona {
-    /**
-     * Historial médico del paciente.
-     */
     private HistorialMedico historial;
-    /**
-     * Médico asignado al paciente.
-     */
     private Medico medicoAsignado;
 
     /**

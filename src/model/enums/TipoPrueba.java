@@ -20,9 +20,6 @@ public enum TipoPrueba {
     PRUEBA_ESFUERZO("Prueba de esfuerzo"),
     ENDOSCOPIA("Endoscopia");
 
-    /**
-     * Nombre legible del tipo de prueba médica.
-     */
     private final String nombre;
 
     /**

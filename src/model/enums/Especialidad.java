@@ -31,9 +31,6 @@ public enum Especialidad {
     ANESTESIOLOGIA("Anestesiología"),
     RADIOLOGIA("Radiología");
 
-    /**
-     * Nombre legible de la especialidad.
-     */
     private final String nombre;
 
     /**

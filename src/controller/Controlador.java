@@ -51,7 +51,7 @@ public class Controlador {
 
         // Admin asigna pruebas médicas
         testAdmin1.asignarPrueba(testPaciente1,testPruebaMedica1);
-        miVista.imprimir("\nAdministrativo a asignado prueba médica...");
+        miVista.imprimir("\nAdministrativo ha asignado prueba médica...");
         // Imprimo historial de Paciente
         miVista.imprimir("\nMédico realiza pruebas...");
         miVista.imprimir(testPruebaMedica1.toString());

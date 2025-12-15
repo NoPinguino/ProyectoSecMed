@@ -11,17 +11,8 @@ package model.entities;
  * @version 1.0
  */
 public class Usuario extends Persona {
-    /**
-     * Nombre de usuario en el sistema.
-     */
     protected String username;
-    /**
-     * Hash de la contraseña.
-     */
     protected String passwordHash;
-    /**
-     * Salt utilizado para generar el hash.
-     */
     protected String salt;
 
     /**

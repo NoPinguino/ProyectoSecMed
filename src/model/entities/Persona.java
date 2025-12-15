@@ -11,21 +11,9 @@ package model.entities;
  * @version 1.0
  */
 public abstract class Persona {
-    /**
-     * Nombre completo.
-     */
     protected String nombre;
-    /**
-     * Documento nacional de identidad.
-     */
     protected String dni;
-    /**
-     * Correo electrónico.
-     */
     protected String email;
-    /**
-     * Dirección postal.
-     */
     protected String direccion;
 
     /**

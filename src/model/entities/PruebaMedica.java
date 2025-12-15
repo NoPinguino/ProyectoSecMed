@@ -14,13 +14,7 @@ import java.time.LocalDate;
  * @version 1.0
  */
 public class PruebaMedica extends EntradaHistorial {
-    /**
-     * Tipo de prueba realizada.
-     */
     private TipoPrueba tipoPrueba;
-    /**
-     * Resultado de la prueba realizada.
-     */
     private String resultado;
 
     /**

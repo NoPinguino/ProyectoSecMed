@@ -14,9 +14,6 @@ import java.util.List;
  * @version 1.0
  */
 public class Receta extends EntradaHistorial{
-    /**
-     * Lista de medicamentos recetados.
-     */
     private List<String> medicamentos;
 
     /**

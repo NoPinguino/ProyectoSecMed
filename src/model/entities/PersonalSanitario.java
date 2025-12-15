@@ -10,9 +10,6 @@ package model.entities;
  * @version 1.0
  */
 public abstract class PersonalSanitario extends Usuario {
-    /**
-     * Número de colegiado
-     */
     protected String numeroColegiado;
 
     /**

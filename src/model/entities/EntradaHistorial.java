@@ -12,17 +12,8 @@ import java.time.LocalDate;
  * @version 1.0
  */
 public abstract class EntradaHistorial {
-    /**
-     * Fecha en la que se ha realizado la entrada.
-     */
     protected LocalDate fecha;
-    /**
-     * Identificador del médico que ha realizado la entrada.
-     */
     protected String idMedico;
-    /**
-     * Motivo de la entrada.
-     */
     protected String causa;
 
     /**
