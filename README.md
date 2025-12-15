@@ -2,8 +2,7 @@
 
 Proyecto de gestión hospitalaria desarrollado en Java para la asignatura **Sistemas y Procesos** del segundo curso del Ciclo Superior de **Desarrollo de Aplicaciones Multiplataforma (DAM)**.
 
-El proyecto ha sido desarrollado con fines puramente educativos por el dueño del repositorio  
-[github.com/NoPinguino](https://github.com/NoPinguino).
+El proyecto ha sido desarrollado con fines puramente educativos por el dueño del repositorio ➩ [github.com/NoPinguino](https://github.com/NoPinguino)
 
 Siéntete libre de utilizar este proyecto para tus propios fines si te resulta útil.
 
@@ -11,9 +10,7 @@ Siéntete libre de utilizar este proyecto para tus propios fines si te resulta �
 
 ## Descripción general
 
-El proyecto se ha desarrollado con el objetivo de aprender y aplicar el patrón de diseño  
-**MVC (Modelo–Vista–Controlador)**, además de repasar conceptos y fundamentos de la  
-**Programación Orientada a Objetos (POO)**.
+El proyecto se ha desarrollado con el objetivo de aprender y aplicar el patrón de diseño **MVC (Modelo–Vista–Controlador)**, además de repasar conceptos y fundamentos de la **Programación Orientada a Objetos (POO)**.
 
 La aplicación permite:
 
