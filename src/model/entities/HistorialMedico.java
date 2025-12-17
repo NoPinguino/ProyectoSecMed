@@ -19,6 +19,28 @@ public class HistorialMedico {
         this.entradas = new ArrayList<>();
     }
 
+
+    public List<Receta> obtenerRecetaPorMedico(Paciente paciente, String idMedicoBuscado) {
+        List<Receta> recetasPorMedico = new ArrayList<>();
+        for (EntradaHistorial entrada : entradas) {
+            if (entrada.getTipo().equals("Receta") && entrada.getIdMedico().equals(idMedicoBuscado)) {
+                recetasPorMedico.add((Receta) entrada);
+            }
+        }
+        return recetasPorMedico;
+    }
+
+    public List<Analisis> obtenerAnalisisDeHistorial(Paciente paciente) {
+        List<Analisis> listaAnalisis = new ArrayList<>();
+        for (EntradaHistorial entrada : entradas) {
+            if (entrada.getTipo().equals("Analisis")) {
+                listaAnalisis.add((Analisis) entrada);
+            }
+        }
+        return listaAnalisis;
+    }
+
+
     /**
      * Devuelve la lista de entradas en el historial de un paciente.
      *
@@ -46,6 +68,6 @@ public class HistorialMedico {
     public String toString() {
         return  "Objeto HistorialMedico {\n" +
                 " entradas = '" + entradas + "'\n" +
-                '}';
+                "} \n";
     }
 }

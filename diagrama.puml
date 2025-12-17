@@ -232,6 +232,25 @@ enum TipoPrueba {
     ENDOSCOPIA
 '/
 
+class Main {
+    + main(args : String[]) : void
+}
+
+' MAIN LLAMA A CONTROLADOR:
+Main --> Controlador : inicia
+
+class Controlador {
+    + iniciar() : void
+}
+
+' VISTA ES SOLO EJECUTADA POR CONTROLADOR:
+
+Controlador --> Vista : usa
+
+class Vista {
+    + imprimir(salida : String) : void
+}
+
 ' RELACIONES DE HERENCIA:
 Persona <|-- Usuario
 Persona <|-- Paciente
@@ -247,5 +266,12 @@ HistorialMedico *-- EntradaHistorial : contiene
 ' ENUMS:
 Medico --> Especialidad
 PruebaMedica --> TipoPrueba
+' RELACIONES EN EL CONTROLADOR:
+Controlador --> Administrativo
+Controlador --> Medico
+Controlador --> Paciente
+Controlador --> PruebaMedica
+Controlador --> Receta
+Controlador --> HistorialMedico
 
 @enduml
